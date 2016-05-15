@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MCChipsView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="WbY-Jl-3aw" userLabel="Chips View" customClass="MCChipsView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-Mw-NA4">
+                    <rect key="frame" x="35" y="8" width="280" height="36"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-md-GrG" customClass="TagsControl">
+                            <rect key="frame" x="0.0" y="3" width="280" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="f7T-ik-AVy"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="VFN-Ws-0AF"/>
+                        <constraint firstItem="Wl7-md-GrG" firstAttribute="leading" secondItem="nAf-Mw-NA4" secondAttribute="leading" id="VQ0-8y-dyF"/>
+                        <constraint firstAttribute="bottom" secondItem="Wl7-md-GrG" secondAttribute="bottom" constant="3" id="Zzn-4d-q5W"/>
+                        <constraint firstItem="Wl7-md-GrG" firstAttribute="top" secondItem="nAf-Mw-NA4" secondAttribute="top" constant="3" id="f5M-JD-jGG"/>
+                        <constraint firstAttribute="height" constant="36" id="iyt-hB-X2R"/>
+                        <constraint firstAttribute="height" constant="46" id="t9b-uy-uCe"/>
+                        <constraint firstAttribute="trailing" secondItem="Wl7-md-GrG" secondAttribute="trailing" id="zP2-JY-gRE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VFN-Ws-0AF"/>
+                            <exclude reference="t9b-uy-uCe"/>
+                        </mask>
+                    </variation>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjD-Id-GyB" userLabel="List Control" customClass="TagsControl">
+                    <rect key="frame" x="5" y="52" width="310" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="SRu-fM-Tmb"/>
+                    </constraints>
+                </scrollView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-WL-9k8">
+                    <rect key="frame" x="10" y="16" width="20" height="20"/>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Mjh-A1-AZ9"/>
+                        <constraint firstAttribute="width" constant="20" id="RmG-CM-TWm"/>
+                        <constraint firstAttribute="height" constant="15" id="axG-h3-an0"/>
+                        <constraint firstAttribute="width" constant="15" id="kTB-bW-APD"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="axG-h3-an0"/>
+                            <exclude reference="kTB-bW-APD"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TjD-Id-GyB" secondAttribute="trailing" constant="5" id="1Zr-Kx-kmb"/>
+                <constraint firstItem="nAf-Mw-NA4" firstAttribute="centerY" secondItem="wF9-WL-9k8" secondAttribute="centerY" id="5mZ-To-1em"/>
+                <constraint firstItem="TjD-Id-GyB" firstAttribute="top" secondItem="nAf-Mw-NA4" secondAttribute="bottom" constant="8" id="6xJ-s1-84z"/>
+                <constraint firstItem="nAf-Mw-NA4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WbY-Jl-3aw" secondAttribute="top" constant="8" id="ANP-K0-TXP"/>
+                <constraint firstItem="TjD-Id-GyB" firstAttribute="top" secondItem="nAf-Mw-NA4" secondAttribute="bottom" constant="20" id="FPH-1k-58X"/>
+                <constraint firstItem="nAf-Mw-NA4" firstAttribute="leading" secondItem="wF9-WL-9k8" secondAttribute="trailing" constant="8" id="LWQ-fi-oLb"/>
+                <constraint firstAttribute="trailing" secondItem="nAf-Mw-NA4" secondAttribute="trailing" constant="8" id="c2Y-FQ-yqV"/>
+                <constraint firstItem="nAf-Mw-NA4" firstAttribute="leading" secondItem="wF9-WL-9k8" secondAttribute="trailing" constant="5" id="eWL-eK-Zhl"/>
+                <constraint firstItem="TjD-Id-GyB" firstAttribute="leading" secondItem="WbY-Jl-3aw" secondAttribute="leading" constant="5" id="h4r-vR-L3s"/>
+                <constraint firstItem="nAf-Mw-NA4" firstAttribute="centerY" secondItem="wF9-WL-9k8" secondAttribute="centerY" id="hUr-WA-vHX"/>
+                <constraint firstItem="wF9-WL-9k8" firstAttribute="leading" secondItem="WbY-Jl-3aw" secondAttribute="leading" constant="10" id="iRW-wN-NQJ"/>
+                <constraint firstItem="wF9-WL-9k8" firstAttribute="leading" secondItem="WbY-Jl-3aw" secondAttribute="leading" constant="5" id="khS-dk-QT6"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TjD-Id-GyB" secondAttribute="bottom" constant="8" id="msU-Yn-h6l"/>
+                <constraint firstAttribute="trailing" secondItem="nAf-Mw-NA4" secondAttribute="trailing" constant="5" id="sHf-6F-oe9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="khS-dk-QT6"/>
+                    <exclude reference="LWQ-fi-oLb"/>
+                    <exclude reference="c2Y-FQ-yqV"/>
+                    <exclude reference="hUr-WA-vHX"/>
+                    <exclude reference="FPH-1k-58X"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="editTagControl" destination="Wl7-md-GrG" id="Njg-6g-0Tb"/>
+                <outlet property="editTagControlContainerView" destination="nAf-Mw-NA4" id="pSD-E9-IDa"/>
+                <outlet property="listTagControl" destination="TjD-Id-GyB" id="cV2-BE-6R2"/>
+            </connections>
+            <point key="canvasLocation" x="323" y="281"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search_icon.png" width="128" height="128"/>
+    </resources>
+</document>
